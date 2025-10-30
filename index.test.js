@@ -1,14 +1,18 @@
-import { describe, it, expect } from 'vitest';
-import { test } from './index.js';
+import { describe, it, expect } from "vitest";
+import { scoreRoll } from "./index.js";
 
-describe('Roman number converter', () => {
-  it.each(
-    [
-        ["I",1],
-        ["II",2],
-        ["III",3]
-        ["X",10],
-    ]) ("should return %s given %s", (expected, input) => {
-        expect(test(input)).toBe(expected);
-    });
+describe("scoreRoll", () => {
+  it("28 pour un Brelan dont les 3 dés ont la même valeur ", () => {
+    expect(scoreRoll([5, 5, 5, 2, 6])).toBe(28);
+  });
+
+  it("35 pour un Carré dont les 4 dés ont la même valeur", () => {
+    expect(scoreRoll([4, 4, 4, 4, 2])).toBe(35);
+  });
+
+  it("50 pour un YAMS dont la valeurs des 5 dés se suivent)", () => {
+    expect(scoreRoll([6, 6, 6, 6, 6])).toBe(50);
+  });
+
+
 });
