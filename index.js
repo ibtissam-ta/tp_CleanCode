@@ -1,4 +1,5 @@
 export function scoreRoll(roll) {
+
   if (
     roll[0] === roll[1] &&
     roll[1] === roll[2] &&
@@ -23,11 +24,26 @@ export function scoreRoll(roll) {
     }
   }
 
+let hasThree = false;
+let hasTwo = false;
+
+for (const value in counts) {
+    if (counts[value] === 3) hasThree = true;
+    if (counts[value] === 2) hasTwo = true;
+  }
+
+    if (hasThree && hasTwo) {
+    return 30;
+  }
+
   for (const value in counts) {
     if (counts[value] === 3) {
       return 28;
     }
   }
+  
 
-  return 0;
+
+
+
 }

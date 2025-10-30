@@ -14,5 +14,10 @@ describe("scoreRoll", () => {
     expect(scoreRoll([6, 6, 6, 6, 6])).toBe(50);
   });
 
+  it("30 pour un Full dont 1 brelan et 1 paire ", () => {
+  expect(scoreRoll([2, 2, 3, 3, 3])).toBe(30);
+});
+
+
 
 });
