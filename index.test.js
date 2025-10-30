@@ -10,7 +10,7 @@ describe("scoreRoll", () => {
     expect(scoreRoll([4, 4, 4, 4, 2])).toBe(35);
   });
 
-  it("50 pour un YAMS dont la valeurs des 5 dés se suivent)", () => {
+  it("50 pour un YAMS dont la valeurs des 5 dés sont les memes)", () => {
     expect(scoreRoll([6, 6, 6, 6, 6])).toBe(50);
   });
 
