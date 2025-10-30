@@ -18,6 +18,16 @@ describe("scoreRoll", () => {
   expect(scoreRoll([2, 2, 3, 3, 3])).toBe(30);
 });
 
+  it("40 pour une Grande suite dont les 5 dés qui se suivent)", () => {
+  expect(scoreRoll([1, 2, 3, 4, 5])).toBe(40);
+  expect(scoreRoll([3, 4, 5, 6, 2])).toBe(40); 
+});
+
+it("Chance: somme des dés si pas de figure ", () => {
+  expect(scoreRoll([1, 2, 3, 4, 5])).toBe(16);
+  expect(scoreRoll([2, 2, 3, 4, 5])).toBe(16);
+});
+
 
 
 });
